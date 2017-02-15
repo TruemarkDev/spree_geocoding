@@ -1,6 +1,6 @@
-SolidusGeocoding
+SpreeGeocoding
 ================
-
+Forked version of https://github.com/solidusio-contrib/solidus_geocoding for Spree 
 Add geocoding to `Spree::Address`.
 
 See https://github.com/alexreisner/geocoder
@@ -8,17 +8,17 @@ See https://github.com/alexreisner/geocoder
 Installation
 ------------
 
-Add solidus_geocoding to your Gemfile:
+Add spree_geocoding to your Gemfile:
 
 ```ruby
-gem 'solidus_geocoding'
+gem 'spree_geocoding'
 ```
 
 Bundle your dependencies and run the installation generator:
 
 ```shell
 bundle
-bundle exec rails g solidus_geocoding:install
+bundle exec rails g spree_geocoding:install
 ```
 
 Testing
@@ -35,7 +35,7 @@ When testing your applications integration with this extension you may use it's 
 Simply add this require statement to your spec_helper:
 
 ```ruby
-require 'solidus_geocoding/factories'
+require 'spree_geocoding/factories'
 ```
 
 Copyright (c) 2016 [Taylor Scott], released under the New BSD License

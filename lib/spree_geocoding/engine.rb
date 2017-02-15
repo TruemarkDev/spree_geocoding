@@ -1,8 +1,8 @@
-module SolidusGeocoding
+module SpreeGeocoding
   class Engine < Rails::Engine
     require 'spree/core'
     isolate_namespace Spree
-    engine_name 'solidus_geocoding'
+    engine_name 'spree_geocoding'
 
     # use rspec for tests
     config.generators do |g|

@@ -30,8 +30,8 @@ require 'spree/testing_support/controller_requests'
 require 'spree/testing_support/factories'
 require 'spree/testing_support/url_helpers'
 
-# Requires factories defined in lib/solidus_geocoding/factories.rb
-require 'solidus_geocoding/factories'
+# Requires factories defined in lib/spree_geocoding/factories.rb
+require 'spree_geocoding/factories'
 
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
