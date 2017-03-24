@@ -12,9 +12,9 @@ module Spree
         ##
         # Addresses are readonly so be sure to only
         # perform geocode on create.
-        after_validation :geocode, on: [:create]
+        after_validation :geocode, if: 'self.changed? && !self.longitude_changed? && !self.latitude_changed?'
       end
-
+      
       ##
       # The full address.
       #
