@@ -9,10 +9,13 @@ module Spree
       included do
         geocoded_by :full_address
 
+        before_validation do
+          self.latitude = self.longitude = nil if self.changed? && !self.longitude_changed? && !self.latitude_changed?
+        end
         ##
         # Addresses are readonly so be sure to only
         # perform geocode on create.
-        after_validation :geocode, if: '(self.changed? && !self.longitude_changed? && !self.latitude_changed?) || !self.longitude || !self.latitude'
+        after_validation :geocode, if: '!self.longitude || !self.latitude'
       end
       
       ##
